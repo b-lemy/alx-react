@@ -68,6 +68,17 @@ CourseListRow.propTypes = {
     isHeader: PropTypes.bool,
     textFirstCell: PropTypes.string,
     textSecondCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    array2:PropTypes.arrayOf(PropTypes.number),
+    array:PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string,PropTypes.number])),
+    person:PropTypes.shape({
+        name:PropTypes.number,
+        age:PropTypes.string,
+    }).isRequired,
+    // or
+    person2:PropTypes.exact({
+        name:PropTypes.number,
+        age:PropTypes.string,
+    })
 };
 
 export default CourseListRow;
